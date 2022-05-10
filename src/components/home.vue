@@ -64,7 +64,10 @@
       <v-tab>Header</v-tab>
     </v-tabs>
     <v-row>
-      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 0">
+      <v-col
+        :cols="isMobile ? 12 : 4"
+        v-if="!isMobile || (isMobile && tabs === 0)"
+      >
         <v-card class="pa-6 rounded-lg" color="cardBase" style="height: 250px">
           <p class="font-weight-medium mb-2">Body</p>
           <prism-editor
@@ -83,7 +86,10 @@
           </p>
         </v-card>
       </v-col>
-      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 1">
+      <v-col
+        :cols="isMobile ? 12 : 4"
+        v-if="!isMobile || (isMobile && tabs === 1)"
+      >
         <v-card
           style="height: 250px"
           class="pa-6 rounded-lg d-flex flex-column overflow-hidden"
@@ -122,7 +128,10 @@
           </div>
         </v-card>
       </v-col>
-      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 2">
+      <v-col
+        :cols="isMobile ? 12 : 4"
+        v-if="!isMobile || (isMobile && tabs === 2)"
+      >
         <v-card
           style="height: 250px"
           class="pa-6 rounded-lg d-flex flex-column overflow-hidden"
