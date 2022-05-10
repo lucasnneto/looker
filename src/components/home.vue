@@ -214,7 +214,7 @@ export default {
     loading: false,
     select: "Request 1",
     type: "GET",
-    url: "https://jsonplaceholder.typicode.com/todos/1",
+    url: "",
     code: "{\n\t\n}",
     duration: "",
     statusCode: "",
