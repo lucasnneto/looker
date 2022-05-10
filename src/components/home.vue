@@ -22,8 +22,8 @@
       </div> -->
     </div>
     <div
-      class="d-flex my-12"
-      :class="{ 'flex-column': isMobile, 'align-center': !isMobile }"
+      class="d-flex"
+      :class="{ 'flex-column my-6': isMobile, 'align-center my-12': !isMobile }"
     >
       <v-select
         :style="isMobile ? '' : 'max-width: 150px'"
