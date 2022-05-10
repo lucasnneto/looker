@@ -21,9 +21,13 @@
         ></v-select>
       </div> -->
     </div>
-    <div class="d-flex align-center my-12">
+    <div
+      class="d-flex my-12"
+      :class="{ 'flex-column': isMobile, 'align-center': !isMobile }"
+    >
       <v-select
-        style="max-width: 150px"
+        :style="isMobile ? '' : 'max-width: 150px'"
+        :full-width="isMobile"
         :items="typesRequest"
         hide-details
         v-model="type"
@@ -33,10 +37,12 @@
         v-model="url"
         outlined
         label="URL"
-        class="mx-9"
+        :full-width="isMobile"
+        :class="{ 'mx-9': !isMobile, 'my-5': isMobile }"
         hide-details
       ></v-text-field>
       <v-btn
+        :block="isMobile"
         height="56"
         color="primary"
         width="100"
@@ -46,8 +52,19 @@
         >look</v-btn
       >
     </div>
+    <v-tabs
+      v-model="tabs"
+      v-if="isMobile"
+      class="mb-3"
+      background-color="transparent"
+      grow
+    >
+      <v-tab>Body</v-tab>
+      <v-tab>Query</v-tab>
+      <v-tab>Header</v-tab>
+    </v-tabs>
     <v-row>
-      <v-col cols="4">
+      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 0">
         <v-card class="pa-6 rounded-lg" color="cardBase" style="height: 250px">
           <p class="font-weight-medium mb-2">Body</p>
           <prism-editor
@@ -66,7 +83,7 @@
           </p>
         </v-card>
       </v-col>
-      <v-col cols="4">
+      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 1">
         <v-card
           style="height: 250px"
           class="pa-6 rounded-lg d-flex flex-column overflow-hidden"
@@ -105,7 +122,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col cols="4">
+      <v-col :cols="isMobile ? 12 : 4" v-if="isMobile && tabs === 2">
         <v-card
           style="height: 250px"
           class="pa-6 rounded-lg d-flex flex-column overflow-hidden"
@@ -212,7 +229,7 @@ export default {
   },
   data: () => ({
     loading: false,
-    select: "Request 1",
+    tabs: 0,
     type: "GET",
     url: "",
     code: "{\n\t\n}",
@@ -263,7 +280,7 @@ export default {
         this.statusCode = status + " OK";
         this.response = JSON.stringify(data, undefined, 2);
       } catch (error) {
-        this.response = this.prettyJ(error.response?.data || "ERROR");
+        this.response = JSON.stringify(error.response?.data || "ERROR");
         this.statusCode = error.response?.status || "ERROR";
 
         this.duration = error.duration;
@@ -273,6 +290,9 @@ export default {
     },
   },
   computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.mobile;
+    },
     badgeColor() {
       if (!this.statusCode) return "";
       if (/^2\d\d/.test(this.statusCode)) return "primary";
