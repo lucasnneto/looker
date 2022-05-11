@@ -40,6 +40,12 @@ Onde foi projetado um design utilizando o **figma** e logo após foi criado a ap
       Vuetify
 </a>
   </li>
+   <li>
+    <a href="https://axios-http.com/docs/intro" style="display:flex;" target="_blank">
+  <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" width="30px" />
+      Axios
+</a>
+  </li>
 </ul>
 
 ## ✒️ Autor
