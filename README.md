@@ -1,5 +1,5 @@
 # Looker
-Looker é uma aplicação web que tem função de realizar testes em API, onde é possivel definir o tipo de requisição (GET, POST, DELETE...), enviar body, querys ou headers personalizados. E obtendo o retorno de uma API, incluindo duração da requisição e o status da chamada.
+Looker é uma aplicação web que tem a função de realizar testes em API, onde é possivel definir o tipo de requisição (GET, POST, DELETE...), enviar body, querys ou headers personalizados. E obtendo o retorno de uma API, incluindo duração da requisição e o status da chamada.
 
 ## 💻 Links Uteis
 <ul>
@@ -18,7 +18,7 @@ Looker é uma aplicação web que tem função de realizar testes em API, onde �
 
 ## 🎈 Sobre o projeto
 Projeto criado para estudos de Vuejs, Vuetify e o uso de requisições HTTP.
-Onde foi projetado uma interface utilizando o **figma** e logo após foi criado a aplicação utilizando **VueJs 2** como tecnologia base, além de engloblar conceitos e técnicas para contrução de projetos e estruturas de layouts.
+Onde foi projetado um design utilizando o **figma** e logo após foi criado a aplicação utilizando **VueJs 2** como tecnologia base, além de engloblar conceitos e técnicas para contrução de projetos e estruturas de layouts.
 
 ## 🖼 Layout do projeto
 <div style="display:flex">
