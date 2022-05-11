@@ -42,7 +42,7 @@ Onde foi projetado um design utilizando o **figma** e logo após foi criado a ap
   </li>
    <li>
     <a href="https://axios-http.com/docs/intro" style="display:flex;" target="_blank">
-  <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" width="30px" />
+  <img src="https://user-images.githubusercontent.com/43313420/105893220-1bae8780-6013-11eb-87be-eeac845ecc6f.png" height="25px" />
       Axios
 </a>
   </li>
