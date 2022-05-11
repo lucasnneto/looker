@@ -1,10 +1,20 @@
 # Looker
 
-## WebSite
-<a href="https://lucasnneto.github.io/looker/" style="display:flex;" target="_blank">
+
+## Links Uteis
+<ul>
+  <li>
+    <a href="https://lucasnneto.github.io/looker/" style="display:flex;" target="_blank">
   <img src="src/assets/logo.svg" height="30px" />
-  <span>lucasnneto.github.io/looker/ </span>
+  <span>Website </span>
 </a>
+  </li>
+  <li>
+    <a href="https://www.figma.com/file/nZzBJYbF9NqyjPE6Mn9vY4/Looker?node-id=2%3A15" style="display:flex;" target="_blank">
+  <span>Figma do projeto </span>
+</a>
+  </li>
+</ul>
 
 ## Sobre o projeto
 Projeto criado afim de estudos.
@@ -17,13 +27,26 @@ Projeto criado afim de estudos.
 
 ## Tecnologias utilizadas
 <div style="display:flex">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="50px" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg" width="50px" />
+  <a href="https://v2.vuejs.org" style="display:flex;" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="50px" />
+</a>
+ <a href="https://vuetifyjs.com/en/" style="display:flex;" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg" width="50px" />
+</a>
+
 </div>
 
 ## Autor
 ### Lucas Neto Oliveira
 Linkedin: [linkedin.com/in/lucasnneto](https://linkedin.com/in/lucasnneto)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Execução do projeto
+### Configuração do projeto
+```
+npm install
+```
+
+### Compilar no ambiente de desenvolvimento
+```
+npm run serve
+```
