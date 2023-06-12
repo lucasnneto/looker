@@ -63,3 +63,7 @@ npm install
 ```
 npm run serve
 ```
+
+### Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
